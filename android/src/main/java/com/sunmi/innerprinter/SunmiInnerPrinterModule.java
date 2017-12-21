@@ -180,24 +180,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					printerService.printerSelfChecking(new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code, msg);
-						}
-					});
+					printerService.printerSelfChecking(null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -266,24 +250,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					printerService.getPrintedLength(new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0", isSuccess + "");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject("" + code, msg);
-						}
-					});
+					printerService.getPrintedLength(null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 					Log.i(TAG,"ERROR: " + e.getMessage());
@@ -307,24 +275,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.lineWrap(count,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.lineWrap(count, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -347,24 +299,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.sendRAWData(d,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.sendRAWData(d, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -387,24 +323,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.setAlignment(align,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.setAlignment(align, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -427,24 +347,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.setFontName(tf,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.setFontName(tf, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -469,24 +373,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.setFontSize(fs,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.setFontSize(fs, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -514,24 +402,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.printTextWithFont(txt,tf,fs,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.printTextWithFont(txt,tf,fs, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -567,24 +439,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.printColumnsText(clst,clsw,clsa,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.printColumnsText(clst,clsw,clsa, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -609,24 +465,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 				@Override
 				public void run() {
 					try {
-						ss.printBitmap(bitMap,new ICallback.Stub(){
-							@Override
-							public void onRunResult(boolean isSuccess){
-								if(isSuccess){
-									 p.resolve(null);
-								}else{
-									p.reject("0",isSuccess+"");
-								}
-							}
-							@Override
-							public void onReturnString(String result){
-								p.resolve(result);
-							}
-							@Override
-							public void  onRaiseException(int code, String msg){
-								p.reject(""+code,msg);
-							}
-						});
+						ss.printBitmap(bitMap, null);
+						p.resolve(null);
 					} catch (Exception e) {
 						e.printStackTrace();
 							Log.i(TAG,"ERROR: " + e.getMessage());
@@ -671,24 +511,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.printBarCode(d,s,h,w,tp,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.printBarCode(d,s,h,w,tp, null);
+                    p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 					Log.i(TAG,"ERROR: " + e.getMessage());
@@ -719,24 +543,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.printQRCode(d,size,level,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.printQRCode(d,size,level, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -761,24 +569,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.printOriginalText(txt,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.printOriginalText(txt, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 						Log.i(TAG,"ERROR: " + e.getMessage());
@@ -867,24 +659,8 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 			@Override
 			public void run() {
 				try {
-					ss.printText(msgs,new ICallback.Stub(){
-						@Override
-						public void onRunResult(boolean isSuccess){
-							if(isSuccess){
-								 p.resolve(null);
-							}else{
-								p.reject("0",isSuccess+"");
-							}
-						}
-						@Override
-						public void onReturnString(String result){
-							p.resolve(result);
-						}
-						@Override
-						public void  onRaiseException(int code, String msg){
-							p.reject(""+code,msg);
-						}
-					});
+					ss.printText(msgs, null);
+					p.resolve(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 					Log.i(TAG,"ERROR: " + e.getMessage());
